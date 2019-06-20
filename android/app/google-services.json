@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1086431995758",
+    "firebase_url": "https://examplechatgroup.firebaseio.com",
+    "project_id": "examplechatgroup",
+    "storage_bucket": "examplechatgroup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086431995758:android:55add67977042499",
+        "android_client_info": {
+          "package_name": "com.chatgroupfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086431995758-iolcfrckikhpmc443ke6fvv2f099h0l4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chatgroupfirebase",
+            "certificate_hash": "1fb295defc6e004919101a91c10d7c554cf7d245"
+          }
+        },
+        {
+          "client_id": "1086431995758-42njcjm59huv9tl4lga4pkdfil9i2795.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD168EXbnLo4fkkM0ALomYR9cD5CH_jKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086431995758-42njcjm59huv9tl4lga4pkdfil9i2795.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1086431995758-82460v9kgrqurisjg1hg6jitskn39lvk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.ChatGroupFireBase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
