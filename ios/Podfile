@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'ChatGroupFireBase' do
+  # Pods for RNFirebaseStarter
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Required by RNFirebase
+  pod 'Firebase/Core', '~> 5.20.1'
+
+  # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
+  pod 'Firebase/Auth', '~> 5.20.1'
+  pod 'Firebase/Core', '~> 5.20.1'
+  pod 'Firebase/Database', '~> 5.20.1'
+  pod 'Firebase/Firestore', '~> 5.20.1'
+
+end
+
+target 'ChatGroupFireBase-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for ChatGroupFireBase-tvOS
+
+  target 'ChatGroupFireBase-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

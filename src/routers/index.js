@@ -1,21 +1,20 @@
 import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
-import Screen1 from "../screens/Screen1";
-import Screen2 from "../screens/Screen2";
+import JoinChatRoomScreen from "../screens/JoinChatRoomScreen";
+import ChatRoomScreen from "../screens/ChatRoomScreen";
 
-const Screen1Stack = createStackNavigator({ JoinRoom: Screen1 });
-const Screen2Stack = createStackNavigator({ ChatRoom: Screen2 });
+const JoinChatStack = createStackNavigator({ JoinRoom: JoinChatRoomScreen });
+const ChatRoomStack = createStackNavigator({ ChatRoom: ChatRoomScreen });
 const AppScreen = createAppContainer(createSwitchNavigator(
     {
-        Screen1: {
-            screen: Screen1Stack
+        Join: {
+            screen: JoinChatStack
         },
-        Screen2: {
-            screen: Screen2Stack
+        ChatRoom: {
+            screen: ChatRoomStack
         }
     },
     {
-        initialRouteName: 'Screen1',
-        headerMode: 'none'
+        initialRouteName: 'Join',
     }
 ));
 

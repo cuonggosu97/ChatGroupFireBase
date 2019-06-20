@@ -27,7 +27,7 @@ class ChatRoom extends React.Component {
     };
 
     _sendMessage = () => {
-        firebase.database().ref('/chatRoom').push({
+        firebase.database().ref('/chatRoom/NhamNhi').push({
             userName: this.state.username,
             chatContent: this.state.chatInputContent,
 
@@ -57,13 +57,14 @@ class ChatRoom extends React.Component {
     async componentDidMount() {
         let username = await AsyncStorage.getItem('name');
         this.setState({ username })
-        firebase.database().ref('/chatRoom').on("value", snapshot => {
+        firebase.database().ref('/chatRoom/NhamNhi').on("value", snapshot => {
             if (snapshot.val() !== undefined && snapshot.val() !== null) {
                 this.setState({
                     chatData: Object.values(snapshot.val())
                 });
+            } else {
+                this.setState({ chatData: [] })
             }
-
         });
     }
 

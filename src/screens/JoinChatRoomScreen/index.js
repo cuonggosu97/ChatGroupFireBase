@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import firebase from 'react-native-firebase';
 class JoinRoom extends React.Component {
     constructor(props) {
+        super(props)
         this.state = {
             name: ''
         }
