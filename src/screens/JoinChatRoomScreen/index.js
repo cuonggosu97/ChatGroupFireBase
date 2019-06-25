@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    View, Text, TextInput,
+    SafeAreaView, Text, TextInput,
     TouchableOpacity, StyleSheet
 } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -26,12 +26,12 @@ class JoinRoom extends React.Component {
     _toChatRoom = () => {
         firebase.auth().signInAnonymously().then((user) => {
             AsyncStorage.setItem('name', this.state.name);
-            this.props.navigation.navigate('ChatRoom');
+            this.props.navigation.navigate('Home');
         }).catch((err) => alert(err));
     }
     render() {
         return (
-            <View style={styles.container} >
+            <SafeAreaView style={styles.container} >
                 <Text>
                     ENTER YOUR NAME :
                 </Text>
@@ -47,7 +47,7 @@ class JoinRoom extends React.Component {
                         Join Now
                     </Text>
                 </TouchableOpacity>
-            </View>
+            </SafeAreaView>
         );
     };
 };

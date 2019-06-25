@@ -1,107 +1,23 @@
 const data = [
     {
-        title: 'Viettel',
-        choosed: true,
-        money: [
-            {
-                number: '10 000',
-                chooser: false
-            },
-            {
-                number: '20 000',
-                chooser: false
-            },
-            {
-                number: '30 000',
-                chooser: false
-            },
-            {
-                number: '50 000',
-                chooser: false
-            },
-            {
-                number: '100 000',
-                chooser: false
-            },
-        ]
+        title: 'Đề',
+        choosed: false,
     },
     {
-        title: 'Mobifone',
+        title: 'Ba càng',
         choosed: false,
-        money: [
-            {
-                number: 100000,
-                chooser: false
-            },
-            {
-                number: 200000,
-                chooser: false
-            },
-            {
-                number: 300000,
-                chooser: false
-            },
-            {
-                number: 400000,
-                chooser: false
-            },
-            {
-                number: 500000,
-                chooser: false
-            },
-        ]
     },
     {
-        title: 'Vietnammobi',
+        title: 'Lô',
         choosed: false,
-        money: [
-            {
-                number: 10000,
-                chooser: false
-            },
-            {
-                number: 20000,
-                chooser: false
-            },
-            {
-                number: 30000,
-                chooser: false
-            },
-            {
-                number: 50000,
-                chooser: false
-            },
-            {
-                number: 100000,
-                chooser: false
-            },
-        ]
     },
     {
-        title: 'Vinaphone',
+        title: 'Xiên 2',
         choosed: false,
-        money: [
-            {
-                number: 100000,
-                chooser: false
-            },
-            {
-                number: 200000,
-                chooser: false
-            },
-            {
-                number: 300000,
-                chooser: false
-            },
-            {
-                number: 400000,
-                chooser: false
-            },
-            {
-                number: 500000,
-                chooser: false
-            },
-        ]
+    },
+    {
+        title: 'Xiên 3',
+        choosed: false,
     },
 ]
 

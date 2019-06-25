@@ -1,46 +1,44 @@
 import React, { PureComponent } from 'react'
-import { StyleSheet, SafeAreaView } from 'react-native'
+import {
+    StyleSheet, SafeAreaView,
+    View, TouchableOpacity,
+    Image, Text
+} from 'react-native'
 
 class BaseView extends PureComponent {
 
     render() {
         const { leftIcon, rightIcon, title, onLeftPress, onRightPress, children } = this.props;
         return (
-            <SafeAreaView style={styles.container}>
+            <View style={styles.viewHeader}>
+                <TouchableOpacity
+                    onPress={onLeftPress}
+                    style={styles.viewIcon}
+                    activeOpacity={0.7}
+                >
+                    <Image
+                        source={leftIcon || Icons.back}
+                        style={styles.icon}
+                    />
+                </TouchableOpacity>
 
-                <View style={styles.viewHeader}>
+                <Text style={styles.title}>
+                    {title}
+                </Text>
 
-                    <TouchableOpacity
-                        onPress={onLeftPress}
-                        style={styles.viewIcon}
-                        activeOpacity={0.7}
-                    >
-                        <Image
-                            source={leftIcon || Icons.back}
-                            style={styles.icon}
-                        />
-                    </TouchableOpacity>
-
-                    <Text style={styles.title}>
-                        {title}
-                    </Text>
-
-                    <TouchableOpacity
-                        onPress={onRightPress}
-                        style={styles.viewIcon}
-                        activeOpacity={0.7}
-                    >
-                        <Image
-                            source={rightIcon}
-                            style={styles.icon}
-                        />
-                    </TouchableOpacity>
-
-                </View>
-
+                <TouchableOpacity
+                    onPress={onRightPress}
+                    style={styles.viewIcon}
+                    activeOpacity={0.7}
+                >
+                    <Image
+                        source={rightIcon}
+                        style={styles.icon}
+                    />
+                </TouchableOpacity>
                 {children}
+            </View>
 
-            </SafeAreaView>
         )
     }
 

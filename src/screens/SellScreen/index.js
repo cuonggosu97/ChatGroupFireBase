@@ -2,22 +2,24 @@ import React, { Component } from 'react'
 import {
     Text, StyleSheet, View,
     FlatList, SafeAreaView,
-    Dimensions, TextInput
+    Dimensions, TextInput,
+    TouchableOpacity
 } from 'react-native'
 
 import data from "../../datas/dataDT";
 import ItemsTitle from "./components/ItemsTitle";
-import ItemsMoney from "./components/ItemsMoney";
+import BaseView from "../../commons/BaseView";
+import { ICON_BACK } from "../../commons/IconManagers";
 
 const { width, height } = Dimensions.get('window')
+// const ICON_BACK = require('../../assets/icons/back.png')
 
 export default class SellComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
             dataList: data,
-            money: data[0].money,
-            cardNumber: ''
+            chatInputContent: ''
         }
     }
 
@@ -30,45 +32,30 @@ export default class SellComponent extends Component {
             }
         })
         this.setState({ dataList: data })
-        this.setState({ money: item.money })
         console.log(this.state.dataList)
 
     }
 
-    _onPressMoney = (item) => {
-        data[item].money.map((e) => {
-            if (item.title === e.title) {
-                return { ...e.choosed = true }
-            } else {
-                return { ...e.choosed = false }
-            }
-        })
-        this.setState({ money: data[item].money })
-        console.log(this.state.dataList)
-    }
-
-    handleCardNumber = (text) => {
-        let formattedText = text.split(' ').join('');
-        if (formattedText.length > 0) {
-            formattedText = formattedText.match(new RegExp('.{1,4}', 'g')).join(' ');
-        }
-        this.setState({ cardNumber: formattedText });
-        return formattedText;
-    }
-
-    _inputEmail = (text) => {
-        this.setState({ cardNumber: text })
+    _onChangeChatInput = (text) => {
+        this.setState({
+            chatInputContent: text
+        });
     }
 
     render() {
         return (
             <SafeAreaView style={styles.container}>
-                {/* <FlatList
-                    style={styles.viewTitle}
+                <BaseView
+                    leftIcon={ICON_BACK}
+                    onLeftPress={() => this.props.navigation.goBack()}
+                />
+                <FlatList
+                    contentContainerStyle={styles.viewTitle}
                     scrollEnabled={false}
                     data={this.state.dataList}
                     extraData={this.state}
-                    numColumns={2}
+                    horizontal={false}
+                    numColumns={3}
                     keyExtractor={(item, index) => index + ''}
                     renderItem={({ item, index }) => {
                         return (
@@ -80,77 +67,62 @@ export default class SellComponent extends Component {
                         )
                     }
                     }
-                /> */}
-                <FlatList
-                    style={styles.viewMoney}
-                    ListHeaderComponent={() => {
-                        return (
-                            <View style={styles.viewEditMoney}>
-                                <Text>
-                                    Số
-                                </Text>
-                                <TextInput
-                                    style={styles.inputMoney}
-                                    keyboardType='number-pad'
-                                    autoCapitalize='none'
-                                    // autoCompleteType='off'
-                                    autoCorrect={false}
-                                    multiline={true}
-                                    textAlignVertical='top'
-                                    returnKeyType = 'next'
-                                    // onChangeText={this._inputEmail}
-                                    // value={this.state.cardNumber}
-                                />
-                            </View>
-                        )
-                    }}
-                    // scrollEnabled={false}
-                    // data={this.state.money}
-                    // extraData={this.state}
-                    // numColumns={3}
-                    // keyExtractor={(item, index) => index + ''}
-                    // renderItem={({ item, index }) => {
-                    //     return (
-                    //         <ItemsMoney
-                    //             item={item}
-                    //             index={index}
-                    //             onPress={this._onPressMoney}
-                    //         />
-                    //     )
-                    // }
-                    // }
                 />
-            </SafeAreaView>
+                <View style={styles.bottomView}  >
+                    <TextInput
+                        style={styles.inputChatText}
+                        value={this.state.chatInputContent}
+                        keyboardType='number-pad'
+                        onChangeText={(text) => this._onChangeChatInput(text)}
+                    />
+                    <TouchableOpacity
+                        style={styles.buttonSent}
+                    >
+                        <Text style={styles.textButton} >
+                            Gửi
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+            </SafeAreaView >
         )
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#888888'
+        backgroundColor: 'white'
     },
     viewTitle: {
         width,
-        marginBottom: 10,
-        backgroundColor: 'white'
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        backgroundColor: 'white',
     },
-    viewMoney: {
-        width,
-        padding: 10,
-        backgroundColor: 'white'
-    },
-    viewEditMoney: {
-        width: width - 40,
-        height: 150,
+
+    bottomView: {
         flexDirection: 'row',
-        alignItems: 'center',
+        width,
+        height: 50,
         justifyContent: 'space-between',
-        marginHorizontal: 10,
+        alignItems: 'center',
+        paddingHorizontal: 10
     },
-    inputMoney: {
-        width: width - 100,
-        height: 150,
+    inputChatText: {
+        height: 35,
+        borderRadius: 8,
+        width: width - 80,
+        fontSize: 18,
         borderWidth: 1,
-        borderColor: 'grey',
+        borderColor: 'grey'
+    },
+    buttonSent: {
+        width: 50,
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    textButton: {
+        color: '#0099ff',
+        fontSize: 18,
     }
 })

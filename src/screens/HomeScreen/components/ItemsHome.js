@@ -8,23 +8,23 @@ import {
 const { width, height } = Dimensions.get('window')
 class ItemsHome extends Component {
     render() {
-        let { title, color, icons, onButton } = this.props
+        const { item, index, onPress } = this.props
         return (
             <TouchableOpacity
                 style={styles.item}
-                onPress={onButton}
+                onPress={() => onPress(index)}
             >
                 <View style={[styles.viewLogo,
                 {
-                    backgroundColor: color,
+                    backgroundColor: item.color,
                 }]}>
                     <Image
-                        source={icons}
+                        source={item.icons}
                         style={styles.icon}
                     />
                 </View>
                 <Text>
-                    {title}
+                    {item.title}
                 </Text>
             </TouchableOpacity>
         );
@@ -35,12 +35,11 @@ export default ItemsHome;
 
 const styles = StyleSheet.create({
     item: {
-        width: width / 2 - 30,
-        height: width / 2 - 30,
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'transparent',
-        margin: 10
+        margin: 10,
+        // backgroundColor: 'red'
     },
     viewLogo: {
         width: 100,

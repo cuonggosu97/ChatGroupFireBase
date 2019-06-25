@@ -9,10 +9,10 @@ export default class ItemsTitle extends Component {
         const { item, index, onPress } = this.props
         return (
             <TouchableOpacity
-                style={[styles.items, { backgroundColor: item.choosed? 'red' : 'white' }]}
+                style={[styles.items, { backgroundColor: item.choosed ? 'rgb(22, 108, 242)' : ' rgb(231, 235, 239)' }]}
                 onPress={() => onPress(item)}
             >
-                <Text style={styles.title}>
+                <Text style={[styles.title, { color: item.choosed ? 'white' : 'black' }]}>
                     {item.title}
                 </Text>
             </TouchableOpacity>
@@ -22,12 +22,15 @@ export default class ItemsTitle extends Component {
 
 const styles = StyleSheet.create({
     items: {
-        padding: 10,
-        borderWidth: 1,
-        borderColor: 'grey',
-        margin: 5
+        paddingHorizontal: 20,
+        height: 30,
+        borderRadius: 15,
+        margin: 5,
+        marginHorizontal: 10,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     title: {
-        fontSize: 16
+        fontSize: 20
     }
 })
