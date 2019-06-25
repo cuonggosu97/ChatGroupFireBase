@@ -38,6 +38,9 @@
 		2DCD954D1E0B4F2C00145EB5 /* ChatGroupFireBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChatGroupFireBaseTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		3146D44F74EBB93162C1534E /* libPods-ChatGroupFireBase-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8B2535D2850CF975C86763 /* libPods-ChatGroupFireBase-tvOS.a */; };
+		558BE6AB22C2168700910463 /* libRNTextInputMask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 558BE6AA22C2166200910463 /* libRNTextInputMask.a */; };
+		558BE6AD22C216AD00910463 /* InputMask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558BE6AC22C216AD00910463 /* InputMask.framework */; };
+		558BE6AE22C216AD00910463 /* InputMask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 558BE6AC22C216AD00910463 /* InputMask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55A2F8F422BB61C600FCD015 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55A2F8F322BB61C600FCD015 /* GoogleService-Info.plist */; };
 		59182ED7A07A449C95221E78 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCD8FB196F543A98B846198 /* libRNGestureHandler.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -261,6 +264,13 @@
 			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
 			remoteInfo = "cxxreact-tvOS";
 		};
+		558BE6A922C2166200910463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 558BE6A422C2166200910463 /* RNTextInputMask.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNTextInputMask;
+		};
 		558C623C22BA81300093C176 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
@@ -354,6 +364,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		558BE6AF22C216AE00910463 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				558BE6AE22C216AD00910463 /* InputMask.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
@@ -380,10 +404,13 @@
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8B2535D2850CF975C86763 /* libPods-ChatGroupFireBase-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatGroupFireBase-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC1813B5A21A541E93D43F7 /* Pods-ChatGroupFireBase-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGroupFireBase-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ChatGroupFireBase-tvOSTests/Pods-ChatGroupFireBase-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		558BE6A422C2166200910463 /* RNTextInputMask.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNTextInputMask.xcodeproj; path = "../node_modules/react-native-text-input-mask/ios/RNTextInputMask.xcodeproj"; sourceTree = "<group>"; };
+		558BE6AC22C216AD00910463 /* InputMask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InputMask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A2F8F322BB61C600FCD015 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7A4DADFC4B594643A7B54E65 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
+		82C22389501C437DB3D38A58 /* libRNTextInputMask.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTextInputMask.a; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8597A18EEE86A40B5BA4065A /* libPods-ChatGroupFireBase-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatGroupFireBase-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BCE0561DD3B1A584AEE7D5 /* Pods-ChatGroupFireBase-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatGroupFireBase-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ChatGroupFireBase-tvOS/Pods-ChatGroupFireBase-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -422,10 +449,12 @@
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				558BE6AD22C216AD00910463 /* InputMask.framework in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				558BE6AB22C2168700910463 /* libRNTextInputMask.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				59182ED7A07A449C95221E78 /* libRNGestureHandler.a in Frameworks */,
@@ -607,6 +636,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		558BE6A522C2166200910463 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				558BE6AA22C2166200910463 /* libRNTextInputMask.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		558C621622BA81300093C176 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +651,7 @@
 				9B20868C732E41918547BDDE /* libRNGestureHandler-tvOS.a */,
 				94E418B7100D48059827CC26 /* libRNCAsyncStorage.a */,
 				7A4DADFC4B594643A7B54E65 /* libRNFirebase.a */,
+				82C22389501C437DB3D38A58 /* libRNTextInputMask.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -664,6 +702,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				558BE6A422C2166200910463 /* RNTextInputMask.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -695,6 +734,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				558BE6AC22C216AD00910463 /* InputMask.framework */,
 				55A2F8F322BB61C600FCD015 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* ChatGroupFireBase */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -760,6 +800,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				9B68E2ED99E1D32162ADA394 /* [CP] Copy Pods Resources */,
+				558BE6AF22C216AE00910463 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -837,6 +878,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -903,6 +945,10 @@
 				{
 					ProductGroup = 558C624422BA81310093C176 /* Products */;
 					ProjectRef = 18C15A673A354ECCB71FCF22 /* RNGestureHandler.xcodeproj */;
+				},
+				{
+					ProductGroup = 558BE6A522C2166200910463 /* Products */;
+					ProjectRef = 558BE6A422C2166200910463 /* RNTextInputMask.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1110,6 +1156,13 @@
 			fileType = archive.ar;
 			path = libcxxreact.a;
 			remoteRef = 3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		558BE6AA22C2166200910463 /* libRNTextInputMask.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNTextInputMask.a;
+			remoteRef = 558BE6A922C2166200910463 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		558C623D22BA81300093C176 /* libjsi.a */ = {
@@ -1435,12 +1488,14 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = ChatGroupFireBaseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1466,12 +1521,14 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = ChatGroupFireBaseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1499,6 +1556,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = ChatGroupFireBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1524,6 +1582,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = ChatGroupFireBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1556,11 +1615,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = "ChatGroupFireBase-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1596,11 +1657,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = "ChatGroupFireBase-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1635,11 +1698,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = "ChatGroupFireBase-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1674,11 +1739,13 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/@react-native-community/async-storage/ios",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-text-input-mask/ios/**",
 				);
 				INFOPLIST_FILE = "ChatGroupFireBase-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
