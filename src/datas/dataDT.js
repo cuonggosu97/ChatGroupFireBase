@@ -1,38 +1,34 @@
 const data = [
     {
-        title: 'Đề',
+        title: 'ABC',
         choosed: false,
     },
     {
-        title: 'Đề đầu',
+        title: 'DEF',
         choosed: false,
     },
     {
-        title: 'Đề đít',
+        title: 'XYZ',
         choosed: false,
     },
     {
-        title: 'Ba càng',
+        title: 'BCA',
         choosed: false,
     },
     {
-        title: 'Lô',
+        title: 'QWE',
         choosed: false,
     },
     {
-        title: 'Xiên 2',
+        title: 'ASD',
         choosed: false,
     },
     {
-        title: 'Xiên 3',
+        title: 'TGB',
         choosed: false,
     },
     {
-        title: 'Dây',
-        choosed: false,
-    },
-    {
-        title: 'Chập',
+        title: 'JHG',
         choosed: false,
     },
 
