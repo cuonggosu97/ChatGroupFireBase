@@ -47,10 +47,6 @@ class BaseView extends PureComponent {
 export default BaseView
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white'
-    },
     viewHeader: {
         height: 50,
         flexDirection: 'row',

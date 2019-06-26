@@ -6,11 +6,14 @@ import {
 
 export default class ItemsTitle extends Component {
     render() {
-        const { item, index, onPress } = this.props
+        const { item, index, onPress, onSetType } = this.props
         return (
             <TouchableOpacity
                 style={[styles.items, { backgroundColor: item.choosed ? 'rgb(22, 108, 242)' : ' rgb(231, 235, 239)' }]}
-                onPress={() => onPress(item)}
+                onPress={() => {
+                    onPress(item)
+                    onSetType(index)
+                }}
             >
                 <Text style={[styles.title, { color: item.choosed ? 'white' : 'black' }]}>
                     {item.title}
