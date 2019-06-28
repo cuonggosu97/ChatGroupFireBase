@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     title: {
-        fontSize: 16,
+        fontSize: 22,
         fontWeight: 'bold',
 
     }

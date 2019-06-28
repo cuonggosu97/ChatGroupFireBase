@@ -33,10 +33,13 @@ export default class HomeScreen extends Component {
         this.props.navigation.navigate('Sell')
         break;
       case 2:
+        this.props.navigation.navigate('Result')
         break;
       case 3:
+          this.props.navigation.navigate('Statistical')
         break;
       case 4:
+          this.props.navigation.navigate('Revenue')
         break;
       default:
         null

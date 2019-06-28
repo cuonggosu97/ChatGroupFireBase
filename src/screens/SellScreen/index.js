@@ -91,6 +91,7 @@ export default class SellComponent extends Component {
                 <BaseView
                     leftIcon={ICON_BACK}
                     onLeftPress={() => this.props.navigation.goBack()}
+                    title={'Ghi'}
                 />
                 <FlatList
                     contentContainerStyle={styles.viewTitle}

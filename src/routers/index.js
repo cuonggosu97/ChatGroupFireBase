@@ -2,6 +2,9 @@ import { createAppContainer, createStackNavigator, createSwitchNavigator } from 
 import JoinChatRoomScreen from "../screens/JoinChatRoomScreen";
 import HomeScreen from "../screens/HomeScreen";
 import SellScreen from "../screens/SellScreen";
+import ResultScreen from "../screens/ResultScreen";
+import StatisticalScreen from "../screens/StatisticalScreen";
+import RevenueScreen from "../screens/RevenueScreen";
 
 const AppScreen = createAppContainer(createStackNavigator(
     {
@@ -13,7 +16,16 @@ const AppScreen = createAppContainer(createStackNavigator(
         },
         Sell: {
             screen: SellScreen
-        }
+        },
+        Result: {
+            screen: ResultScreen
+        },
+        Statistical: {
+            screen: StatisticalScreen
+        },
+        Revenue: {
+            screen: RevenueScreen
+        },
     },
     {
         initialRouteName: 'Home',
