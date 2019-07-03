@@ -4,13 +4,13 @@ import HomeScreen from "../screens/HomeScreen";
 import SellScreen from "../screens/SellScreen";
 import ResultScreen from "../screens/ResultScreen";
 import StatisticalScreen from "../screens/StatisticalScreen";
-import RevenueScreen from "../screens/RevenueScreen";
+import UserScreen from "../screens/UserScreen";
+import OTPScreen from "../commons/OTPScreen";
+import LoginScreen from "../screens/LoginScreen";
+import LoadingScreen from "../screens/LoadingScreen";
 
-const AppScreen = createAppContainer(createStackNavigator(
+const StackApp = createStackNavigator(
     {
-        Login: {
-            screen: JoinChatRoomScreen
-        },
         Home: {
             screen: HomeScreen
         },
@@ -23,14 +23,38 @@ const AppScreen = createAppContainer(createStackNavigator(
         Statistical: {
             screen: StatisticalScreen
         },
-        Revenue: {
-            screen: RevenueScreen
+        User: {
+            screen: UserScreen
+        },
+        OTP: {
+            screen: OTPScreen
+        },
+        Login: {
+            screen: LoginScreen
         },
     },
     {
         initialRouteName: 'Home',
         headerMode: 'none'
     }
-));
+);
+const AppScreen = createAppContainer(createSwitchNavigator(
+    {
+        Loading: {
+            screen: LoadingScreen
+        },
+        Login: {
+            screen: LoginScreen
+        },
+        Home: {
+            screen: HomeScreen
+        },
+        StackApp: StackApp
+    },
+    {
+        initialRouteName: 'Loading',
+        headerMode: 'none'
+    }
+))
 
 export default AppScreen;

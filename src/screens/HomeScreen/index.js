@@ -14,7 +14,7 @@ const homes = [
   { title: "Ghi", color: 'rgb(251,202,58)', icons: Icons.ICON_WRITE },
   { title: "Kết quả", color: "rgb(83, 212, 191)", icons: Icons.ICON_RESULT },
   { title: "Thống kê", color: "rgb(52, 202, 223)", icons: Icons.ICON_STATISTICAL },
-  { title: "Doanh thu", color: "rgb(255, 130, 85)", icons: Icons.ICON_REVENUE },
+  { title: "Tài khoản", color: "rgb(255, 130, 85)", icons: Icons.ICON_USER },
 ]
 
 
@@ -36,10 +36,10 @@ export default class HomeScreen extends Component {
         this.props.navigation.navigate('Result')
         break;
       case 3:
-          this.props.navigation.navigate('Statistical')
+        this.props.navigation.navigate('Statistical')
         break;
       case 4:
-          this.props.navigation.navigate('Revenue')
+        this.props.navigation.navigate('User')
         break;
       default:
         null

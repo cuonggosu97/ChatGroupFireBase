@@ -9,7 +9,7 @@ import {
 import BaseView from "../../commons/BaseView";
 import { ICON_BACK } from '../../commons/IconManagers'
 
-export default class RevenueScreen extends Component {
+export default class UserScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,8 +21,8 @@ export default class RevenueScreen extends Component {
             <SafeAreaView style={styles.container}>
                 <BaseView
                     leftIcon={ICON_BACK}
-                    onLeftPress={() => this.props.navigation.goBack()}
-                    title={'Doanh thu'}
+                    onLeftPress={() => this.props.navigation.navigate('Home')}
+                    title={'Tài khoản'}
                 />
 
             </SafeAreaView>

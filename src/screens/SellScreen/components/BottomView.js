@@ -33,6 +33,7 @@ export default class BottomView extends PureComponent {
         this.setState({
             txtWriteNumber: extracted
         });
+        console.log(this.state.txtWriteNumber)
     }
 
     _onSentData = async () => {
