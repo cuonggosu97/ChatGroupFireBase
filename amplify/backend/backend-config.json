@@ -1,0 +1,8 @@
+{
+	"auth": {
+		"chatgroupfirebase": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

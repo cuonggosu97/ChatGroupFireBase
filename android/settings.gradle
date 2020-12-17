@@ -1,4 +1,6 @@
 rootProject.name = 'ChatGroupFireBase'
+include ':amazon-cognito-identity-js'
+project(':amazon-cognito-identity-js').projectDir = new File(rootProject.projectDir, '../node_modules/amazon-cognito-identity-js/android')
 include ':react-native-text-input-mask'
 project(':react-native-text-input-mask').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-text-input-mask/android')
 include ':react-native-firebase'

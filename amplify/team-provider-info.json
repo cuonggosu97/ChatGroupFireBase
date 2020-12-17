@@ -1,0 +1,19 @@
+{
+    "chatgroup": {
+        "awscloudformation": {
+            "AuthRoleName": "chatgroupfirebase-chatgroup-20190705205332-authRole",
+            "UnauthRoleArn": "arn:aws:iam::372497568681:role/chatgroupfirebase-chatgroup-20190705205332-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::372497568681:role/chatgroupfirebase-chatgroup-20190705205332-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "chatgroupfirebase-chatgroup-20190705205332-deployment",
+            "UnauthRoleName": "chatgroupfirebase-chatgroup-20190705205332-unauthRole",
+            "StackName": "chatgroupfirebase-chatgroup-20190705205332",
+            "StackId": "arn:aws:cloudformation:us-east-2:372497568681:stack/chatgroupfirebase-chatgroup-20190705205332/47fd70c0-9f2c-11e9-9440-06faad620df0"
+        },
+        "categories": {
+            "auth": {
+                "chatgroupfirebase": {}
+            }
+        }
+    }
+}

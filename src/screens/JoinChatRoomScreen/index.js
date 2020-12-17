@@ -24,10 +24,11 @@ class JoinRoom extends React.Component {
         });
     };
     _toChatRoom = () => {
-        firebase.auth().signInAnonymously().then((user) => {
-            AsyncStorage.setItem('name', this.state.name);
-            this.props.navigation.navigate('Home');
-        }).catch((err) => alert(err));
+        firebase.auth().signInAnonymously()
+            .then((user) => {
+                AsyncStorage.setItem('name', this.state.name);
+                this.props.navigation.navigate('Home');
+            }).catch((err) => alert(err));
     }
     render() {
         return (

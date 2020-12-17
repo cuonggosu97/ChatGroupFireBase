@@ -1,0 +1,82 @@
+{
+    "identityPoolName": "chatgroupfirebase5db44944_identitypool_5db44944",
+    "allowUnauthenticatedIdentities": true,
+    "lambdaLogPolicy": "chatgr_5db44944_lambda_log_policy",
+    "openIdLambdaRoleName": "chatgr_5db44944_openid_lambda_role",
+    "openIdRolePolicy": "chatgr_5db44944_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "chatgr_5db44944_openid_lambda_iam_policy",
+    "openIdLogPolicy": "chatgr_5db44944_openid_lambda_log_policy",
+    "userPoolName": "chatgroupfirebase5db44944_userpool_5db44944",
+    "autoVerifiedAttributes": [
+        "phone_number"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "chatgr5db44944_sns-role",
+    "roleExternalId": "chatgr5db44944_role_external_id",
+    "policyName": "chatgr5db44944-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": true,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Numbers"
+    ],
+    "requiredAttributes": [
+        "address",
+        "given_name",
+        "nickname",
+        "phone_number"
+    ],
+    "userpoolClientName": "chatgr5db44944_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "address",
+        "given_name",
+        "nickname",
+        "phone_number"
+    ],
+    "userpoolClientReadAttributes": [
+        "address",
+        "given_name",
+        "nickname",
+        "phone_number"
+    ],
+    "mfaLambdaRole": "chatgr5db44944_totp_lambda_role",
+    "mfaLambdaLogPolicy": "chatgr5db44944_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "chatgr5db44944_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "chatgr5db44944_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "chatgr5db44944_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "chatgr5db44944_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "chatgr5db44944_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": true,
+    "useDefault": "manual",
+    "authSelections": "identityPoolAndUserPool",
+    "resourceName": "chatgroupfirebase",
+    "thirdPartyAuth": false,
+    "hostedUI": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    }
+}
